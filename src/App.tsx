@@ -9,7 +9,7 @@ import { AppErrorBoundary } from './components/common/AppErrorBoundary'
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <AppErrorBoundary>
         <Header />
         <Routes>
