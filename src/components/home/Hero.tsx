@@ -1,4 +1,4 @@
-import { ArrowDown, GitFork, FileText } from "lucide-react";
+import { ArrowDown, GitFork, FileText, Presentation } from "lucide-react";
 import { ButtonLink } from "../common/ButtonLink";
 import { ImageWithFallback } from "../common/ImageWithFallback";
 import { profile } from "../../data/profile";
@@ -26,6 +26,9 @@ export function Hero() {
             </ButtonLink>
             <ButtonLink href={profile.resume} external variant="text">
               이력서 <FileText />
+            </ButtonLink>
+            <ButtonLink href={profile.portfolioPdf} external variant="text">
+              포트폴리오 PDF <Presentation />
             </ButtonLink>
           </div>
         </div>

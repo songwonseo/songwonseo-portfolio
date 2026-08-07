@@ -71,6 +71,9 @@ export function Header() {
           <a href={profile.resume} target="_blank" rel="noreferrer">
             RESUME
           </a>
+          <a href={profile.portfolioPdf} target="_blank" rel="noreferrer">
+            PORTFOLIO PDF
+          </a>
         </nav>
       </div>
     </header>
