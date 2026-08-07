@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { profile } from "../../data/profile";
+import { getAssetUrl } from "../../utils/path";
 
 const nav = [
   ["about", "ABOUT"],
@@ -68,10 +69,10 @@ export function Header() {
               {label}
             </button>
           ))}
-          <a href={profile.resume} target="_blank" rel="noreferrer">
+          <a href={getAssetUrl(profile.resume)} target="_blank" rel="noreferrer">
             RESUME
           </a>
-          <a href={profile.portfolioPdf} target="_blank" rel="noreferrer">
+          <a href={getAssetUrl(profile.portfolioPdf)} target="_blank" rel="noreferrer">
             PORTFOLIO PDF
           </a>
         </nav>
