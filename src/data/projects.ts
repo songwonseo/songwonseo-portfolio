@@ -51,7 +51,6 @@ export interface Project {
 // 실제 URL이 준비되면 아래 빈 문자열만 교체하세요.
 const LETS_PLAN_GITHUB_URL = "https://github.com/songwonseo/LetsPlan";
 const LETS_PLAN_DEMO_URL = "https://www.youtube.com/watch?v=3f3y_ypdwAQ";
-const LIFE_QUEST_GITHUB_URL = "";
 const LIFE_QUEST_DEMO_URL = "";
 
 export const projects: Project[] = [
@@ -241,15 +240,31 @@ export const projects: Project[] = [
       "일간·주간 및 지역 기반 퀘스트를 수행해 EXP를 얻고, 레벨·업적·도감·칭호를 수집합니다. 친구와 EXP 랭킹에서는 서로의 활동 기록을 비교하며 함께 성장할 수 있습니다.",
       "퀘스트 수행 → 인증 → 경험치 획득 → 성장 기록 → 사용자 간 경쟁과 교류가 하나의 흐름으로 이어지도록 설계했습니다. React 관리자 웹에서는 퀘스트 등록·수정, 사용자 관리와 서비스 데이터를 통합 확인합니다.",
     ],
-    keywords: ["Quest", "EXP & Level", "Achievement", "Location", "Ranking", "Social"],
+    keywords: [
+      "Quest",
+      "EXP & Level",
+      "Achievement",
+      "Location",
+      "Ranking",
+      "Social",
+    ],
     overview: [
       "LifeQuest는 일상 속 새로운 활동을 퀘스트처럼 발견하고 직접 도전하는 라이프 RPG 서비스입니다.",
       "퀘스트를 완료하면 EXP를 획득하고 레벨, 업적, 도감과 칭호에 활동 기록이 쌓이면서 캐릭터와 계정이 함께 성장합니다.",
       "Flutter Mobile App + React Admin Web + Spring Boot Backend 구조로 구성해 사용자 경험과 운영 데이터 관리 흐름을 함께 구현했습니다.",
     ],
-    skills: ["Flutter", "React", "Spring Boot", "Java", "REST API", "MySQL", "Git", "GitHub"],
+    skills: [
+      "Flutter",
+      "React",
+      "Spring Boot",
+      "Java",
+      "REST API",
+      "MySQL",
+      "Git",
+      "GitHub",
+    ],
     thumbnail: "/images/projects/lifequest/thumbnail.png",
-    githubUrl: LIFE_QUEST_GITHUB_URL,
+    githubUrl: "https://github.com/mahoora0/LifeQuest",
     demoUrl: LIFE_QUEST_DEMO_URL,
     documentUrl: "",
     features: [
@@ -376,7 +391,7 @@ export const projects: Project[] = [
           "프로필, 성장 기록, 도감과 계정 정보를 관리하는 개인 공간입니다.",
       },
       {
-        src: "",
+        src: "/images/projects/lifequest/spec-admin.png",
         title: "Admin Web",
         description:
           "React 기반 관리자 웹에서 퀘스트 등록·수정, 사용자 관리와 서비스 데이터를 통합 확인합니다.",
