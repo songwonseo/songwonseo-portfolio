@@ -18,6 +18,8 @@ export interface Screenshot {
   src: string;
   title: string;
   description: string;
+  type?: "mobile" | "desktop";
+  cropLeft?: boolean;
 }
 export interface Project {
   id: string;
@@ -43,6 +45,7 @@ export interface Project {
   troubles: TroubleCase[];
   reflection: string;
   accent?: "green";
+  keywords?: string[];
 }
 
 // 실제 URL이 준비되면 아래 빈 문자열만 교체하세요.
@@ -154,6 +157,7 @@ export const projects: Project[] = [
         src: "/images/projects/letsplan/spec-search.png",
         title: "플래너즈 탐색",
         description: "이름·취미·키워드 검색과 정렬, 찜 기능을 함께 사용합니다.",
+        cropLeft: true,
       },
       {
         src: "/images/projects/letsplan/spec-create.png",
@@ -233,16 +237,17 @@ export const projects: Project[] = [
     status: "In Progress",
     accent: "green",
     description: [
-      "‘오늘은 뭘 하지?’라는 고민을 줄이고 평소 하지 않았던 활동을 게임의 퀘스트처럼 발견하고 도전하도록 만든 서비스입니다.",
-      "단순 체크리스트와 달리 퀘스트 발견, 도전, 완료, EXP 획득, 성장 기록이 하나의 게임형 경험으로 이어집니다.",
-      "완료한 경험은 레벨과 업적, 도감, 칭호에 누적되어 사용자가 자신의 활동 변화를 지속적으로 확인할 수 있습니다.",
+      "LifeQuest는 일상 속 활동을 게임의 퀘스트처럼 수행하고 기록하며 성장하는 라이프 RPG 서비스입니다.",
+      "일간·주간 및 지역 기반 퀘스트를 수행해 EXP를 얻고, 레벨·업적·도감·칭호를 수집합니다. 친구와 EXP 랭킹에서는 서로의 활동 기록을 비교하며 함께 성장할 수 있습니다.",
+      "퀘스트 수행 → 인증 → 경험치 획득 → 성장 기록 → 사용자 간 경쟁과 교류가 하나의 흐름으로 이어지도록 설계했습니다. React 관리자 웹에서는 퀘스트 등록·수정, 사용자 관리와 서비스 데이터를 통합 확인합니다.",
     ],
+    keywords: ["Quest", "EXP & Level", "Achievement", "Location", "Ranking", "Social"],
     overview: [
       "LifeQuest는 일상 속 새로운 활동을 퀘스트처럼 발견하고 직접 도전하는 라이프 RPG 서비스입니다.",
       "퀘스트를 완료하면 EXP를 획득하고 레벨, 업적, 도감과 칭호에 활동 기록이 쌓이면서 캐릭터와 계정이 함께 성장합니다.",
-      "친구 프로필과 랭킹을 통해 다른 사용자와 성장 과정을 확인하고 비교할 수 있어 일반적인 습관 관리 앱과 다른 게임형 경험을 제공합니다.",
+      "Flutter Mobile App + React Admin Web + Spring Boot Backend 구조로 구성해 사용자 경험과 운영 데이터 관리 흐름을 함께 구현했습니다.",
     ],
-    skills: ["Spring Boot", "REST API", "MySQL", "Flutter", "Git", "GitHub"],
+    skills: ["Flutter", "React", "Spring Boot", "Java", "REST API", "MySQL", "Git", "GitHub"],
     thumbnail: "/images/projects/lifequest/thumbnail.png",
     githubUrl: LIFE_QUEST_GITHUB_URL,
     demoUrl: LIFE_QUEST_DEMO_URL,
@@ -324,33 +329,58 @@ export const projects: Project[] = [
     ],
     screenshots: [
       {
-        src: "",
+        src: "/images/projects/lifequest/spec-main.png",
         title: "메인 화면",
         description:
           "오늘의 퀘스트와 사용자 성장 정보를 한눈에 확인하는 메인 화면입니다.",
       },
       {
-        src: "",
+        src: "/images/projects/lifequest/spec-quests.png",
         title: "퀘스트 화면",
         description: "다양한 일상 퀘스트를 탐색하고 도전할 수 있는 화면입니다.",
       },
       {
-        src: "",
+        src: "/images/projects/lifequest/spec-recommend.png",
+        title: "추천 퀘스트 화면",
+        description:
+          "사용자 관심사와 위치 기반으로 추천 퀘스트를 확인하는 화면입니다.",
+      },
+      {
+        src: "/images/projects/lifequest/spec-group.png",
         title: "그룹 퀘스트 화면",
         description:
           "다른 사용자와 함께 목표에 도전하는 협동 퀘스트 화면입니다.",
       },
       {
-        src: "",
+        src: "/images/projects/lifequest/spec-dogam.png",
+        title: "도감 화면",
+        description:
+          "사용자가 완료한 퀘스트와 획득한 업적을 기록하는 도감 화면입니다.",
+      },
+      {
+        src: "/images/projects/lifequest/spec-achievements.png",
+        title: "업적 / 칭호 화면",
+        description:
+          "사용자가 달성한 업적과 획득한 칭호를 확인하는 화면입니다.",
+      },
+      {
+        src: "/images/projects/lifequest/spec-friends.png",
         title: "친구 화면",
         description:
           "친구의 프로필과 성장 정보를 확인하고 비교하는 소셜 화면입니다.",
       },
       {
-        src: "",
+        src: "/images/projects/lifequest/spec-mypage.png",
         title: "마이페이지",
         description:
           "프로필, 성장 기록, 도감과 계정 정보를 관리하는 개인 공간입니다.",
+      },
+      {
+        src: "",
+        title: "Admin Web",
+        description:
+          "React 기반 관리자 웹에서 퀘스트 등록·수정, 사용자 관리와 서비스 데이터를 통합 확인합니다.",
+        type: "desktop",
       },
     ],
     troubles: [

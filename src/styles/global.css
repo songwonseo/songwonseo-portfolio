@@ -602,8 +602,8 @@ a:focus-visible {
   letter-spacing: 0.06em;
 }
 .status--in-progress {
-  background: #d6f76a;
-  color: #1a220a;
+  background: #f6c453;
+  color: #4b3425;
 }
 .image-placeholder {
   min-height: 220px;
@@ -1004,6 +1004,16 @@ a:focus-visible {
   width: 100%;
   aspect-ratio: 16/10;
   object-fit: contain;
+}
+.gallery--mockups img {
+  display: block;
+  width: min(100%, 210px);
+  height: auto;
+  aspect-ratio: auto;
+  margin-inline: auto;
+  border: 1px solid #b8cfdf;
+  border-radius: 24px;
+  object-fit: initial;
 }
 .gallery figcaption {
   padding: 20px;
@@ -1744,7 +1754,7 @@ body {
 }
 .contact h2 {
   color: var(--primary);
-  letter-spacing: 0.055em;
+  letter-spacing: 0.022em;
   line-height: 0.96;
 }
 .contact h2 em {
@@ -1795,6 +1805,18 @@ body {
 .project-hero p {
   color: #4a6684;
   line-height: 1.7;
+}
+.project-page .case-intro,
+.project-page .split-section {
+  grid-template-columns: minmax(270px, 0.68fr) minmax(0, 1.32fr);
+}
+.project-page .case-intro h2,
+.project-page .split-section h2 {
+  white-space: nowrap;
+  word-break: keep-all;
+}
+.project-page .introduction-copy p {
+  font-size: 1.08rem;
 }
 .project-facts div {
   border-color: #d8e7f4;
@@ -1878,7 +1900,11 @@ body {
     box-shadow: 0 18px 40px rgba(44, 77, 108, 0.1);
   }
   .contact h2 {
-    letter-spacing: 0.04em;
+    letter-spacing: 0.018em;
+  }
+  .project-page .case-intro,
+  .project-page .split-section {
+    grid-template-columns: 1fr;
   }
   .certificates {
     padding: 24px;
@@ -1896,7 +1922,7 @@ body {
   }
   .contact h2 {
     font-size: clamp(2.65rem, 14vw, 4rem);
-    letter-spacing: 0.025em;
+    letter-spacing: 0.012em;
   }
   .certificates {
     margin-top: 48px;
@@ -1926,4 +1952,334 @@ body {
   .document-viewer {
     min-height: 420px;
   }
+}
+
+/* Project identity: shared structure, project-specific flat color systems */
+.project-page {
+  --project-main: #1557b8;
+  --project-deep: #0b3472;
+  --project-soft: #eaf3ff;
+  --project-tint: #f6faff;
+  --project-line: #c9ddf5;
+  background: var(--light);
+}
+.project-theme--letsplan {
+  --project-main: #155de8;
+  --project-deep: #082d68;
+  --project-soft: #eaf2ff;
+  --project-tint: #f7faff;
+  --project-line: var(--border);
+}
+.project-theme--lifequest {
+  --project-main: #76543d;
+  --project-deep: #302922;
+  --project-soft: #f5eee6;
+  --project-tint: #fbf8f4;
+  --project-line: var(--border);
+}
+.project-page .project-eyebrow,
+.project-page .case-label,
+.project-page .role-list span,
+.project-page .feature-grid article > span,
+.project-page .flow span,
+.project-page .trouble-grid strong {
+  color: var(--project-main);
+}
+.project-page .project-hero h1,
+.project-page .case-heading h2,
+.project-page .case-intro h2,
+.project-page .split-section h2,
+.project-page .reflection h2 {
+  color: var(--project-deep);
+}
+.project-page .overview-section > .container,
+.project-page .project-facts div,
+.project-page .gallery figure {
+  border-color: var(--project-line);
+}
+.project-page .project-facts div,
+.project-page .gallery figure,
+.project-page .tech-list li {
+  background: #fff;
+}
+.project-page .tech-list li {
+  border-color: var(--project-line);
+  color: var(--project-deep);
+}
+.project-page .case-section--dark,
+.project-page .flow-section,
+.project-page .troubleshooting {
+  background: var(--dark);
+  color: #fff;
+}
+.project-page .feature-grid article,
+.project-page .flow > div,
+.project-page .trouble-grid article {
+  border-color: var(--project-line);
+  background: var(--surface);
+}
+.project-page .feature-grid h3,
+.project-page .flow strong,
+.project-page .trouble-grid h3 {
+  color: var(--primary);
+}
+.project-page .feature-grid p,
+.project-page .flow p,
+.project-page .trouble-grid p {
+  color: #506b89;
+}
+.project-page .admin-flow h3 {
+  color: var(--primary);
+}
+.project-theme--lifequest .case-heading h2,
+.project-theme--lifequest .case-intro h2,
+.project-theme--lifequest .split-section h2,
+.project-theme--lifequest .reflection h2 {
+  color: var(--primary);
+}
+.project-theme--lifequest .project-eyebrow,
+.project-theme--lifequest .case-label {
+  color: var(--project-deep);
+  font-weight: 850;
+}
+.project-theme--lifequest .role-list span,
+.project-theme--lifequest .feature-grid article > span,
+.project-theme--lifequest .flow span,
+.project-theme--lifequest .flow svg,
+.project-theme--lifequest .trouble-grid strong,
+.project-theme--lifequest .admin-preview > span {
+  color: var(--project-deep);
+}
+.project-theme--lifequest .next-project {
+  background: var(--project-deep);
+}
+.project-theme--lifequest .admin-preview li,
+.project-theme--lifequest .browser-chrome small {
+  color: var(--project-deep);
+}
+.project-page .feature-grid article,
+.project-page .gallery figure {
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.project-page .feature-grid article:hover,
+.project-page .gallery figure:hover {
+  transform: translateY(-4px);
+  border-color: var(--project-main);
+  box-shadow: 0 14px 34px rgba(45, 66, 43, 0.08);
+}
+.project-page .project-links {
+  border-color: var(--project-line);
+  background: #e3f0f9;
+}
+.project-page .next-project {
+  background: var(--project-main);
+}
+.project-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 12px;
+}
+.project-keywords li {
+  padding: 6px 10px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--project-soft);
+  color: var(--project-deep);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+.project-page .gallery figure:hover {
+  border-color: var(--project-line);
+}
+.screen-crop {
+  overflow: hidden;
+}
+.screen-crop--left img {
+  width: calc(100% + 2px);
+  max-width: none;
+  transform: translateX(-2px);
+}
+.gallery--mockups .screen-crop {
+  display: flex;
+  justify-content: center;
+}
+.gallery--mockups .screen--desktop {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(220px, 0.45fr);
+  gap: clamp(24px, 4vw, 52px);
+  align-items: center;
+  padding: clamp(18px, 3vw, 34px);
+  background: var(--project-soft);
+}
+.gallery--mockups .screen--desktop figcaption {
+  padding: 0;
+}
+.gallery--mockups .screen--desktop figcaption strong {
+  color: var(--project-deep);
+  font-size: 1.25rem;
+}
+.browser-mockup {
+  overflow: hidden;
+  min-height: 330px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #fffef8;
+  box-shadow: 0 18px 38px rgba(72, 52, 37, 0.12);
+}
+.browser-chrome {
+  height: 42px;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border-bottom: 1px solid var(--border);
+  background: #f5eee8;
+}
+.browser-chrome span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #b89478;
+}
+.browser-chrome small {
+  margin-left: 10px;
+  color: #856d5b;
+  font-size: 0.68rem;
+}
+.admin-preview {
+  min-height: 288px;
+  padding: clamp(28px, 5vw, 52px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #fffef8;
+}
+.admin-preview > span {
+  color: var(--project-main);
+  font-size: 0.68rem;
+  font-weight: 850;
+  letter-spacing: 0.16em;
+}
+.admin-preview > strong {
+  margin-top: 10px;
+  color: var(--project-deep);
+  font-size: clamp(1.35rem, 3vw, 2.25rem);
+}
+.admin-preview ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 26px;
+}
+.admin-preview li {
+  padding: 8px 11px;
+  border: 1px solid var(--project-line);
+  border-radius: 8px;
+  color: #735f50;
+  font-size: 0.72rem;
+}
+.skill-item--ai {
+  align-items: flex-start;
+}
+.skill-detail {
+  display: block;
+  margin-top: 4px;
+  color: #6d86a5;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .gallery--mockups .screen--desktop {
+    grid-template-columns: 1fr;
+  }
+  .browser-mockup {
+    min-height: 280px;
+  }
+}
+@media (max-width: 560px) {
+  .gallery--mockups .screen--desktop {
+    padding: 14px;
+  }
+  .browser-mockup {
+    min-height: 230px;
+    border-radius: 10px;
+  }
+  .admin-preview {
+    min-height: 188px;
+    padding: 24px 20px;
+  }
+}
+
+/* Home project cards: neutral surfaces with project-specific accents */
+.section--projects .project-card {
+  --card-accent: #155de8;
+  --card-accent-deep: #082d68;
+  --card-accent-soft: #eaf2ff;
+  --card-accent-line: var(--border);
+  border: 0;
+}
+.section--projects .project-card--lifequest {
+  --card-accent: #76543d;
+  --card-accent-deep: #302922;
+  --card-accent-soft: #f5eee6;
+  --card-accent-line: var(--border);
+}
+.section--projects .project-card:hover {
+  border-color: transparent;
+  box-shadow: 0 16px 38px rgba(52, 91, 126, 0.1);
+}
+.section--projects .project-card .project-media {
+  border-bottom: 0;
+}
+.section--projects .project-card .project-index {
+  color: color-mix(in srgb, var(--card-accent) 18%, transparent);
+}
+.section--projects .project-card .project-body > p,
+.section--projects .project-card .project-body h3,
+.section--projects .project-card .project-meta span {
+  color: var(--card-accent-deep);
+}
+.section--projects .project-card .tags span {
+  background: var(--card-accent-soft);
+  color: var(--card-accent-deep);
+}
+.section--projects .project-card .button--primary {
+  background: var(--card-accent);
+}
+.section--projects .project-card .button--primary:hover {
+  background: var(--card-accent-deep);
+}
+.section--projects .project-card .button--secondary,
+.section--projects .project-card .button--text {
+  border-color: var(--card-accent-line);
+  color: var(--card-accent-deep);
+}
+.section--projects .project-card--lifequest .button--primary {
+  background: #f6c453;
+  color: #4b3425;
+}
+.section--projects .project-card--lifequest .button--primary:hover {
+  background: #eab442;
+  color: #4b3425;
+}
+
+/* LifeQuest final color overrides */
+.project-theme--lifequest .next-project {
+  background: #302922;
+}
+.project-theme--lifequest .project-keywords li {
+  background: #f6c453;
+  color: #4b3425;
+}
+.project-theme--lifequest .screen--desktop figcaption strong,
+.project-theme--lifequest .screen--desktop figcaption p,
+.project-theme--lifequest .admin-preview > strong,
+.project-theme--lifequest .admin-preview > span,
+.project-theme--lifequest .admin-preview li,
+.project-theme--lifequest .browser-chrome small {
+  color: var(--primary);
 }

@@ -28,7 +28,7 @@ export function ProjectPage() {
     else navigate("/#projects");
   };
   return (
-    <main className={`project-page${project.accent ? " lifequest-theme" : ""}`}>
+    <main className={`project-page project-theme--${project.id}`}>
       <section className="project-hero">
         <div className="container">
           <button
@@ -100,6 +100,11 @@ export function ProjectPage() {
             {project.description.map((p) => (
               <p key={p}>{p}</p>
             ))}
+            {project.keywords && (
+              <ul className="project-keywords" aria-label="프로젝트 핵심 키워드">
+                {project.keywords.map((keyword) => <li key={keyword}>{keyword}</li>)}
+              </ul>
+            )}
           </div>
         </div>
       </section>
@@ -196,13 +201,24 @@ export function ProjectPage() {
             className={`gallery${project.id === "lifequest" ? " gallery--mockups" : ""}`}
           >
             {project.screenshots.map((s) => (
-              <figure key={s.title}>
+              <figure className={s.type === "desktop" ? "screen--desktop" : undefined} key={s.title}>
                 {s.src ? (
-                  <ImageWithFallback
-                    src={s.src}
-                    alt={`${project.title} ${s.title} 화면`}
-                    label={`${project.title} · ${s.title}`}
-                  />
+                  <div className={s.cropLeft ? "screen-crop screen-crop--left" : "screen-crop"}>
+                    <ImageWithFallback
+                      src={s.src}
+                      alt={`${project.title} ${s.title} 화면`}
+                      label={`${project.title} · ${s.title}`}
+                    />
+                  </div>
+                ) : s.type === "desktop" ? (
+                  <div className="browser-mockup" role="img" aria-label="관리자 웹 화면 준비 중">
+                    <div className="browser-chrome"><span/><span/><span/><small>admin.lifequest</small></div>
+                    <div className="admin-preview">
+                      <span>ADMIN WEB</span>
+                      <strong>Preparing Admin Screen</strong>
+                      <ul><li>Quest Management</li><li>User Data</li><li>Service Overview</li></ul>
+                    </div>
+                  </div>
                 ) : (
                   <div
                     className="phone-mockup"
