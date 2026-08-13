@@ -1984,6 +1984,13 @@ body {
   --project-tint: #fbf8f4;
   --project-line: var(--border);
 }
+.project-theme--mywatchlog {
+  --project-main: #6252dc;
+  --project-deep: #262144;
+  --project-soft: #eeecff;
+  --project-tint: #f8f7ff;
+  --project-line: #dcd8f2;
+}
 .project-page .project-eyebrow,
 .project-page .case-label,
 .project-page .role-list span,
@@ -2258,6 +2265,12 @@ body {
   --card-accent-deep: #302922;
   --card-accent-soft: #f5eee6;
   --card-accent-line: var(--border);
+}
+.section--projects .project-card--mywatchlog {
+  --card-accent: #6252dc;
+  --card-accent-deep: #262144;
+  --card-accent-soft: #eeecff;
+  --card-accent-line: #dcd8f2;
 }
 .section--projects .project-card:hover {
   border-color: transparent;

@@ -198,7 +198,7 @@ export function ProjectPage() {
             <h2>주요 화면</h2>
           </div>
           <div
-            className={`gallery${project.id === "lifequest" ? " gallery--mockups" : ""}`}
+            className={`gallery${project.id === "lifequest" || project.id === "mywatchlog" ? " gallery--mockups" : ""}`}
           >
             {project.screenshots.map((s) => (
               <figure className={s.type === "desktop" ? "screen--desktop" : undefined} key={s.title}>

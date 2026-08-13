@@ -436,6 +436,197 @@ export const projects: Project[] = [
     reflection:
       "Flutter 앱과 Spring Boot 서버, 관리자 웹이 하나의 데이터를 공유하도록 연결하면서 화면마다 필요한 정보가 달라도 API 기준은 일관되어야 한다는 점을 배웠습니다. 친구 관계처럼 사용자 사이에서 계속 변하는 상태와 EXP 랭킹처럼 여러 데이터를 비교하는 기능을 구현하며, 데이터 구조를 먼저 정리해야 UI도 안정적으로 바뀐다는 것을 이해했습니다. 팀원들의 기능을 합칠 때는 각 화면만 보는 것이 아니라 사용자가 퀘스트를 발견하고 성장 결과를 확인하는 전체 흐름을 함께 점검했습니다.",
   },
+  {
+    id: "mywatchlog",
+    title: "My Watch Log",
+    displayTitle: "MY WATCH LOG",
+    subtitle: "영화·드라마 감상 기록 아카이브",
+    period: "2026.08 - 2026.09",
+    type: "Personal Project",
+    role: "기획, 디자인, 프론트엔드·백엔드 전체 구현",
+    status: "Completed",
+    description: [
+      "My Watch Log는 영화와 드라마를 보고 난 뒤 흩어지기 쉬운 감상과 평점을 한곳에 기록하는 개인 아카이브 서비스입니다.",
+      "영화, 드라마, 애니, 웹툰 등 작품 유형별로 기록을 분류하고 감상 상태와 최근 등록순 등의 조건으로 원하는 작품을 빠르게 찾아볼 수 있도록 구성했습니다.",
+      "반응형 React 화면과 Spring Boot REST API, MySQL 데이터베이스를 연결해 작품 등록부터 조회, 수정, 삭제까지 하나의 기록 흐름으로 구현했습니다.",
+    ],
+    keywords: ["Watch Log", "Archive", "Review", "Rating", "Responsive"],
+    overview: [
+      "My Watch Log는 감상한 영화와 드라마를 기록하고 정리하며 나만의 작품 아카이브를 만들어가는 개인 기록 서비스입니다.",
+      "작품별 감상 상태, 별점과 감상 내용을 저장하고 카테고리·상태·정렬 조건을 조합해 누적된 기록을 편리하게 탐색할 수 있습니다.",
+      "기획과 UI 디자인부터 React 프론트엔드, Spring Boot 백엔드와 MySQL 데이터 저장까지 서비스 전 과정을 직접 설계하고 구현했습니다.",
+    ],
+    skills: [
+      "React",
+      "TypeScript",
+      "Spring Boot",
+      "Java",
+      "REST API",
+      "MySQL",
+      "Git",
+      "GitHub",
+    ],
+    thumbnail: "/images/projects/mywatchlog/thumbnail.png",
+    githubUrl: "https://github.com/songwonseo/MyWatchLog",
+    demoUrl: "https://youtu.be/hPqc9up2AV0",
+    documentUrl: "",
+    features: [
+      {
+        title: "작품 기록 관리",
+        description:
+          "작품 정보와 감상 상태, 별점, 감상 내용을 등록하고 수정·삭제하며 개인 기록을 누적합니다.",
+      },
+      {
+        title: "카테고리별 아카이브",
+        description:
+          "영화·드라마·애니·웹툰으로 작품을 분류하고 각 카테고리의 기록 수와 목록을 한눈에 확인합니다.",
+      },
+      {
+        title: "검색·필터·정렬",
+        description:
+          "작품명 검색과 감상 상태 필터, 최근 등록순 정렬을 조합해 원하는 기록을 빠르게 찾습니다.",
+      },
+      {
+        title: "반응형 기록 경험",
+        description:
+          "데스크톱과 모바일 환경에 맞춰 카드와 탐색 UI가 자연스럽게 재배치되도록 구현했습니다.",
+      },
+    ],
+    responsibilities: [
+      "서비스 콘셉트와 사용자 기록 흐름 기획",
+      "데스크톱·모바일 반응형 UI 디자인 및 React 구현",
+      "작품 등록·조회·수정·삭제 REST API 구현",
+      "카테고리·감상 상태·별점 기반 데이터 모델 설계",
+      "Spring Boot와 MySQL을 연결한 전체 데이터 흐름 구현",
+    ],
+    flow: [
+      {
+        title: "로그인",
+        description:
+          "개인 계정으로 서비스에 접속해 나만의 감상 기록을 관리합니다.",
+      },
+      {
+        title: "작품 등록",
+        description:
+          "작품 유형과 기본 정보, 감상 상태를 입력해 새 기록을 만듭니다.",
+      },
+      {
+        title: "감상 기록",
+        description:
+          "별점과 감상 내용을 더해 작품에 대한 개인 경험을 남깁니다.",
+      },
+      {
+        title: "아카이브 조회",
+        description:
+          "카테고리별 기록 수와 최근 등록한 작품을 홈에서 확인합니다.",
+      },
+      {
+        title: "탐색",
+        description:
+          "검색·상태 필터·정렬을 이용해 누적된 작품 기록을 찾습니다.",
+      },
+      {
+        title: "기록 관리",
+        description:
+          "작품 상세에서 기록을 다시 확인하고 수정하거나 삭제합니다.",
+      },
+    ],
+    screenshots: [
+      {
+        src: "/images/projects/mywatchlog/spec-main.png",
+        title: "홈 대시보드",
+        description:
+          "전체·유형별 기록 수와 최근 추가한 작품을 한 화면에서 확인하는 데스크톱 홈입니다.",
+        type: "desktop",
+      },
+      {
+        src: "/images/projects/mywatchlog/spec-mylog.png",
+        title: "내 기록",
+        description:
+          "카테고리별 기록 수와 최근 등록한 작품을 확인하고 검색·필터·정렬로 원하는 기록을 찾는 데스크톱 기록 화면입니다.",
+        type: "desktop",
+      },
+      {
+        src: "/images/projects/mywatchlog/spec-register.png",
+        title: "작품 등록",
+        description:
+          "작품 유형과 기본 정보, 감상 상태를 입력해 새 기록을 등록하는 데스크톱 등록 화면입니다.",
+        type: "desktop",
+      },
+      {
+        src: "/images/projects/mywatchlog/spec-mypage.png",
+        title: "마이페이지",
+        description:
+          "개인 계정 정보와 기록 통계를 확인하고 비밀번호를 변경하는 데스크톱 마이페이지입니다.",
+        type: "desktop",
+      },
+      {
+        src: "/images/projects/mywatchlog/phone-home.png",
+        title: "모바일 홈",
+        description:
+          "전체·유형별 기록 수와 최근 등록한 작품을 확인하고 검색·필터·정렬로 원하는 기록을 찾는 모바일 홈 화면입니다.",
+        type: "mobile",
+      },
+      {
+        src: "/images/projects/mywatchlog/phone-mylog.png",
+        title: "모바일 내 기록",
+        description:
+          "카테고리별 기록 수와 최근 등록한 작품을 확인하고 검색·필터·정렬로 원하는 기록을 찾는 모바일 기록 화면입니다.",
+        type: "mobile",
+      },
+      {
+        src: "/images/projects/mywatchlog/phone-register.png",
+        title: "모바일 작품 등록",
+        description:
+          "작품 유형과 기본 정보, 감상 상태를 입력해 새 기록을 등록하는 모바일 등록 화면입니다.",
+        type: "mobile",
+      },
+      {
+        src: "/images/projects/mywatchlog/phone-mypage.png",
+        title: "모바일 마이페이지",
+        description:
+          "개인 계정 정보와 기록 통계를 확인하고 비밀번호를 변경하는 모바일 마이페이지입니다.",
+        type: "mobile",
+      },
+    ],
+    troubles: [
+      {
+        title: "여러 탐색 조건의 일관된 적용",
+        problem:
+          "카테고리와 감상 상태, 검색어와 정렬 조건을 함께 사용할 때 조건에 따라 목록 결과가 달라져야 했습니다.",
+        cause:
+          "각 조건을 독립적으로 처리하면 조건 변경 시 일부 필터가 초기화되거나 서로 다른 결과 기준을 사용할 수 있었습니다.",
+        solution:
+          "현재 탐색 조건을 하나의 조회 기준으로 정리하고 조건이 바뀔 때 동일한 흐름으로 목록을 다시 요청하도록 구성했습니다.",
+        result:
+          "여러 조건을 조합해도 사용자가 선택한 기준이 유지되고 예상 가능한 기록 목록을 확인할 수 있게 됐습니다.",
+      },
+      {
+        title: "카테고리별 집계와 목록 동기화",
+        problem:
+          "작품을 등록하거나 삭제한 직후 홈의 전체·유형별 기록 수와 최근 기록 목록이 함께 갱신되어야 했습니다.",
+        cause:
+          "요약 집계와 작품 목록이 서로 다른 화면 데이터로 관리되면 갱신 시점에 차이가 생길 수 있었습니다.",
+        solution:
+          "기록 변경이 완료된 뒤 요약 정보와 목록을 같은 저장 결과를 기준으로 다시 조회하도록 데이터 흐름을 정리했습니다.",
+        result:
+          "등록·수정·삭제 이후 대시보드의 집계와 실제 목록이 같은 상태를 유지하도록 개선했습니다.",
+      },
+      {
+        title: "데스크톱과 모바일 탐색 UI 재구성",
+        problem:
+          "넓은 화면의 필터와 작품 카드 구성을 작은 모바일 화면에서도 읽기 쉽고 조작하기 편하게 제공해야 했습니다.",
+        cause:
+          "데스크톱 배치를 단순히 축소하면 필터 영역과 카드 정보가 좁아지고 주요 동작의 우선순위가 흐려졌습니다.",
+        solution:
+          "화면 너비에 따라 검색·필터와 카드 열 수를 재배치하고 모바일 하단 내비게이션으로 핵심 동작의 접근성을 높였습니다.",
+        result:
+          "기기 크기에 관계없이 기록 검색과 등록, 목록 탐색을 자연스럽게 이어갈 수 있게 됐습니다.",
+      },
+    ],
+    reflection:
+      "개인 프로젝트로 기획부터 화면 설계, API와 데이터베이스 연결까지 전 과정을 직접 맡으며 하나의 기능이 화면에 보이는 것보다 저장과 재조회 이후에도 일관된 상태를 유지하는 것이 중요하다는 점을 배웠습니다. 특히 검색·필터·정렬처럼 여러 조건이 겹치는 기능과 요약 집계를 구현하면서 데이터 조회 기준을 먼저 명확히 정리해야 반응형 UI도 단순하고 안정적으로 구성할 수 있음을 이해했습니다.",
+  },
 ];
 export const getProject = (id?: string) =>
   projects.find((project) => project.id === id);
