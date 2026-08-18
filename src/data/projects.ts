@@ -266,7 +266,7 @@ export const projects: Project[] = [
     thumbnail: "/images/projects/lifequest/thumbnail.png",
     githubUrl: "https://github.com/mahoora0/LifeQuest",
     demoUrl: LIFE_QUEST_DEMO_URL,
-    documentUrl: "",
+    documentUrl: "/documents/lifequest-specification.pdf",
     features: [
       {
         title: "퀘스트",
@@ -441,7 +441,7 @@ export const projects: Project[] = [
     title: "My Watch Log",
     displayTitle: "MY WATCH LOG",
     subtitle: "영화·드라마 감상 기록 아카이브",
-    period: "2026.08 - 2026.09",
+    period: "2026.08",
     type: "Personal Project",
     role: "기획, 디자인, 프론트엔드·백엔드 전체 구현",
     status: "Completed",
@@ -469,7 +469,7 @@ export const projects: Project[] = [
     thumbnail: "/images/projects/mywatchlog/thumbnail.png",
     githubUrl: "https://github.com/songwonseo/MyWatchLog",
     demoUrl: "https://youtu.be/hPqc9up2AV0",
-    documentUrl: "",
+    documentUrl: "/documents/mywatchlog-specification.pdf",
     features: [
       {
         title: "작품 기록 관리",
