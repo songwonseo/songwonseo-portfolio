@@ -1,4 +1,55 @@
-import { FileText, GitFork, Mail, Presentation } from 'lucide-react'
-import { ButtonLink } from '../common/ButtonLink'
-import { profile } from '../../data/profile'
-export function Contact(){return <section id="contact" className="section contact"><div className="container contact-grid"><div><span className="contact-label">05 / CONTACT</span><h2>LET'S BUILD<br/><em>TOGETHER.</em></h2></div><div><p>맡은 역할을 끝까지 책임지고, 문제와 진행 상황을 명확하게 공유하는 함께 일하기 좋은 개발자가 되겠습니다.</p><dl><div><dt>E-mail</dt><dd><a href={`mailto:${profile.email}`}>{profile.email}</a></dd></div><div><dt>GitHub</dt><dd><a href={profile.github} target="_blank" rel="noreferrer">github.com/songwonseo</a></dd></div></dl><div className="button-row"><ButtonLink href={`mailto:${profile.email}`}><Mail/> 이메일 보내기</ButtonLink><ButtonLink href={profile.github} external variant="secondary"><GitFork/> GitHub</ButtonLink><ButtonLink href={profile.resume} external variant="text"><FileText/> 이력서</ButtonLink><ButtonLink href={profile.portfolioPdf} external variant="text"><Presentation/> 포트폴리오 PDF</ButtonLink></div></div></div></section>}
+import { FileText, GitFork, Mail, Presentation } from "lucide-react";
+import { ButtonLink } from "../common/ButtonLink";
+import { profile } from "../../data/profile";
+export function Contact() {
+  return (
+    <section id="contact" className="section contact">
+      <div className="container contact-grid">
+        <div>
+          <span className="contact-label">05 / CONTACT</span>
+          <h2>
+            LET'S BUILD
+            <br />
+            <em>TOGETHER.</em>
+          </h2>
+        </div>
+        <div>
+          <p>
+            맡은 역할을 끝까지 책임지고, 문제와 진행 상황을 명확하게 공유하는
+            함께 일하기 좋은 개발자가 되겠습니다.
+          </p>
+          <dl>
+            <div>
+              <dt>E-mail</dt>
+              <dd>
+                <a href={`mailto:${profile.email}`}>{profile.email}</a>
+              </dd>
+            </div>
+            <div>
+              <dt>GitHub</dt>
+              <dd>
+                <a href={profile.github} target="_blank" rel="noreferrer">
+                  github.com/songwonseo
+                </a>
+              </dd>
+            </div>
+          </dl>
+          <div className="button-row">
+            <ButtonLink href={`mailto:${profile.email}`}>
+              <Mail /> 이메일 보내기
+            </ButtonLink>
+            <ButtonLink href={profile.github} external variant="secondary">
+              <GitFork /> GitHub
+            </ButtonLink>
+            <ButtonLink href={profile.resume} external variant="text">
+              <FileText /> 이력서
+            </ButtonLink>
+            <ButtonLink href={profile.portfolioPdf} external variant="text">
+              <Presentation /> 포트폴리오 PDF
+            </ButtonLink>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

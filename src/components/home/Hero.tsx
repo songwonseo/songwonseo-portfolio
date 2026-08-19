@@ -15,7 +15,9 @@ export function Hero() {
           <h1>
             <span>{profile.englishName}</span>
             {profile.headline.map((line) => (
-              <span className="hero-headline-line" key={line}>{line}</span>
+              <span className="hero-headline-line" key={line}>
+                {line}
+              </span>
             ))}
           </h1>
           <p className="hero-intro">{profile.intro}</p>

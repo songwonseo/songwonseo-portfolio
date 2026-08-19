@@ -69,10 +69,18 @@ export function Header() {
               {label}
             </button>
           ))}
-          <a href={getAssetUrl(profile.resume)} target="_blank" rel="noreferrer">
+          <a
+            href={getAssetUrl(profile.resume)}
+            target="_blank"
+            rel="noreferrer"
+          >
             RESUME
           </a>
-          <a href={getAssetUrl(profile.portfolioPdf)} target="_blank" rel="noreferrer">
+          <a
+            href={getAssetUrl(profile.portfolioPdf)}
+            target="_blank"
+            rel="noreferrer"
+          >
             PORTFOLIO PDF
           </a>
         </nav>

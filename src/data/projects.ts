@@ -51,7 +51,6 @@ export interface Project {
 // 실제 URL이 준비되면 아래 빈 문자열만 교체하세요.
 const LETS_PLAN_GITHUB_URL = "https://github.com/songwonseo/LetsPlan";
 const LETS_PLAN_DEMO_URL = "https://www.youtube.com/watch?v=3f3y_ypdwAQ";
-const LIFE_QUEST_DEMO_URL = "";
 
 export const projects: Project[] = [
   {
@@ -265,7 +264,7 @@ export const projects: Project[] = [
     ],
     thumbnail: "/images/projects/lifequest/thumbnail.png",
     githubUrl: "https://github.com/mahoora0/LifeQuest",
-    demoUrl: LIFE_QUEST_DEMO_URL,
+    demoUrl: "https://youtu.be/hYjeqslQNTQ",
     documentUrl: "/documents/lifequest-specification.pdf",
     features: [
       {

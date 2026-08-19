@@ -1,3 +1,60 @@
-import { MapPin, Layers3, CheckCircle2 } from 'lucide-react'
-import { SectionTitle } from '../common/SectionTitle'
-export function About(){return <section id="about" className="section section--light"><div className="container"><SectionTitle eyebrow="01 / PROFILE" title="ABOUT ME"/><div className="about-grid"><div className="about-copy reveal"><p>웹사이트 운영과 콘텐츠 관리 경험을 바탕으로 Java, Spring Boot, React를 학습하며 서비스의 화면부터 서버와 데이터베이스까지 연결되는 흐름을 이해해 왔습니다.</p><p>기능을 구현할 때 화면의 동작 결과만 확인하지 않고, 요청과 응답, 데이터 저장 과정과 예외 상황을 순서대로 점검하는 것을 중요하게 생각합니다.</p><p>맡은 기능을 끝까지 확인하고 진행 상황과 문제를 팀원에게 명확하게 공유하는 신뢰할 수 있는 웹 개발자로 성장하고 있습니다.</p></div><dl className="profile-card reveal"><div><dt>Name</dt><dd>송원서</dd></div><div><dt>Position</dt><dd><Layers3/>Web Developer</dd></div><div><dt>Main Stack</dt><dd>Java / Spring Boot / React</dd></div><div><dt>Strength</dt><dd><CheckCircle2/>기능 흐름 점검 · 문제 원인 확인 · 진행 상황 공유</dd></div><div><dt>Location</dt><dd><MapPin/>Busan, Korea</dd></div></dl></div></div></section>}
+import { MapPin, Layers3, CheckCircle2 } from "lucide-react";
+import { SectionTitle } from "../common/SectionTitle";
+export function About() {
+  return (
+    <section id="about" className="section section--light">
+      <div className="container">
+        <SectionTitle eyebrow="01 / PROFILE" title="ABOUT ME" />
+        <div className="about-grid">
+          <div className="about-copy reveal">
+            <p>
+              웹사이트 운영과 콘텐츠 관리 경험을 바탕으로 Java, Spring Boot,
+              React를 학습하며 서비스의 화면부터 서버와 데이터베이스까지
+              연결되는 흐름을 이해해 왔습니다.
+            </p>
+            <p>
+              기능을 구현할 때 화면의 동작 결과만 확인하지 않고, 요청과 응답,
+              데이터 저장 과정과 예외 상황을 순서대로 점검하는 것을 중요하게
+              생각합니다.
+            </p>
+            <p>
+              맡은 기능을 끝까지 확인하고 진행 상황과 문제를 팀원에게 명확하게
+              공유하는 신뢰할 수 있는 웹 개발자로 성장하고 있습니다.
+            </p>
+          </div>
+          <dl className="profile-card reveal">
+            <div>
+              <dt>Name</dt>
+              <dd>송원서</dd>
+            </div>
+            <div>
+              <dt>Position</dt>
+              <dd>
+                <Layers3 />
+                Web Developer
+              </dd>
+            </div>
+            <div>
+              <dt>Main Stack</dt>
+              <dd>Java / Spring Boot / React</dd>
+            </div>
+            <div>
+              <dt>Strength</dt>
+              <dd>
+                <CheckCircle2 />
+                기능 흐름 점검 · 문제 원인 확인 · 진행 상황 공유
+              </dd>
+            </div>
+            <div>
+              <dt>Location</dt>
+              <dd>
+                <MapPin />
+                Busan, Korea
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+  );
+}

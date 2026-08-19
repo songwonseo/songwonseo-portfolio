@@ -1,5 +1,57 @@
-import { Braces, Database, PanelsTopLeft, Wrench } from 'lucide-react'
-import { SectionTitle } from '../common/SectionTitle'
-import { skillGroups } from '../../data/skills'
-const icons=[Braces,PanelsTopLeft,Database,Wrench]
-export function Skills(){return <section id="skills" className="section section--dark"><div className="container"><SectionTitle eyebrow="02 / CAPABILITY" title="SKILLS & TOOLS" description="프로젝트 적용 경험과 현재 학습 범위를 과장 없이 구분했습니다."/><div className="legend"><span className="level project">PROJECT</span><span className="level learning">LEARNING</span><span className="level basic">BASIC</span></div><div className="skill-grid">{skillGroups.map((group,index)=>{const Icon=icons[index];return <article className="skill-card reveal" key={group.title}><Icon className="skill-icon"/><h3>{group.title}</h3><ul>{group.items.map((item)=><li className={item.name === 'AI-assisted Development' ? 'skill-item--ai' : undefined} key={item.name}><span>{item.name}{item.name === 'AI-assisted Development' && <small className="skill-detail">ChatGPT · Codex</small>}</span><small className={`level ${item.level.toLowerCase()}`}>{item.level}</small></li>)}</ul></article>})}</div></div></section>}
+import { Braces, Database, PanelsTopLeft, Wrench } from "lucide-react";
+import { SectionTitle } from "../common/SectionTitle";
+import { skillGroups } from "../../data/skills";
+const icons = [Braces, PanelsTopLeft, Database, Wrench];
+export function Skills() {
+  return (
+    <section id="skills" className="section section--dark">
+      <div className="container">
+        <SectionTitle
+          eyebrow="02 / CAPABILITY"
+          title="SKILLS & TOOLS"
+          description="프로젝트 적용 경험과 현재 학습 범위를 과장 없이 구분했습니다."
+        />
+        <div className="legend">
+          <span className="level project">PROJECT</span>
+          <span className="level learning">LEARNING</span>
+          <span className="level basic">BASIC</span>
+        </div>
+        <div className="skill-grid">
+          {skillGroups.map((group, index) => {
+            const Icon = icons[index];
+            return (
+              <article className="skill-card reveal" key={group.title}>
+                <Icon className="skill-icon" />
+                <h3>{group.title}</h3>
+                <ul>
+                  {group.items.map((item) => (
+                    <li
+                      className={
+                        item.name === "AI-assisted Development"
+                          ? "skill-item--ai"
+                          : undefined
+                      }
+                      key={item.name}
+                    >
+                      <span>
+                        {item.name}
+                        {item.name === "AI-assisted Development" && (
+                          <small className="skill-detail">
+                            ChatGPT · Codex
+                          </small>
+                        )}
+                      </span>
+                      <small className={`level ${item.level.toLowerCase()}`}>
+                        {item.level}
+                      </small>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}

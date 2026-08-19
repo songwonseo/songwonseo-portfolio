@@ -8,7 +8,7 @@ export const profile = {
   email: "elmsunny@naver.com",
   github: "https://github.com/songwonseo",
   resume: "/documents/resume-songwonseo.pdf",
-  portfolioPdf: "/documents/송원서_portfolio.pdf",
+  portfolioPdf: "/documents/송원서-portfolio.pdf",
   location: "Busan, Korea",
   stack: ["Java", "Spring Boot", "React", "MySQL", "REST API", "Git"],
 };
