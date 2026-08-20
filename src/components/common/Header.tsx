@@ -48,7 +48,12 @@ export function Header() {
   return (
     <header className={`site-header${scrolled ? " is-scrolled" : ""}`}>
       <div className="header-inner">
-        <Link className="brand" to="/" aria-label="홈으로">
+        <Link
+          className="brand"
+          to="/"
+          aria-label="홈으로"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
           SWS<span>.</span>
         </Link>
         <button
