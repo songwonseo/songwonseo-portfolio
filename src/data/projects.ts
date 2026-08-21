@@ -264,7 +264,7 @@ export const projects: Project[] = [
     ],
     thumbnail: "/images/projects/lifequest/thumbnail.png",
     githubUrl: "https://github.com/mahoora0/LifeQuest",
-    demoUrl: "https://youtu.be/eR-J65grkYo",
+    demoUrl: "https://youtu.be/F23mMb9XMhM",
     documentUrl: "/documents/lifequest-specification.pdf",
     features: [
       {
@@ -467,7 +467,7 @@ export const projects: Project[] = [
     ],
     thumbnail: "/images/projects/mywatchlog/thumbnail.png",
     githubUrl: "https://github.com/songwonseo/MyWatchLog",
-    demoUrl: "https://youtu.be/hPqc9up2AV0",
+    demoUrl: "https://youtu.be/niloH3JpSi8",
     documentUrl: "/documents/mywatchlog-specification.pdf",
     features: [
       {

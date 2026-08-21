@@ -1106,6 +1106,18 @@ a:focus-visible {
   background: #fff;
   color: #0b2942;
 }
+.project-links--hero {
+  margin-top: 30px;
+  padding: 22px;
+}
+.project-links--hero .button-row {
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.project-links--hero .button {
+  min-height: 46px;
+  padding-inline: 17px;
+}
 .next-project {
   padding: 60px max(24px, calc((100vw - 1200px) / 2));
   display: grid;

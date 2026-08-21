@@ -43,11 +43,34 @@ export function ProjectPage() {
               <span className="project-eyebrow">CASE STUDY · 0{index + 1}</span>
               <h1>{project.displayTitle}</h1>
               <p>{project.subtitle}</p>
-              <span
-                className={`status status--${project.status.replace(" ", "-").toLowerCase()}`}
-              >
-                {project.status}
-              </span>
+              <div className="project-links project-links--hero">
+                <h3>프로젝트 링크</h3>
+                <div className="button-row">
+                  <ButtonLink
+                    href={project.githubUrl}
+                    external
+                    disabled={!project.githubUrl}
+                  >
+                    <GitFork /> GitHub
+                  </ButtonLink>
+                  <ButtonLink
+                    href={project.demoUrl}
+                    external
+                    disabled={!project.demoUrl}
+                    variant="secondary"
+                  >
+                    <Play /> 시연 영상
+                  </ButtonLink>
+                  <ButtonLink
+                    to={`/projects/${project.id}/document`}
+                    state={{ fromProject: true }}
+                    disabled={!project.documentUrl}
+                    variant="text"
+                  >
+                    <FileText /> 프로젝트 문서
+                  </ButtonLink>
+                </div>
+              </div>
             </div>
             <ImageWithFallback
               src={project.thumbnail}
